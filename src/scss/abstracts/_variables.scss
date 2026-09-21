@@ -1,0 +1,31 @@
+// =============================================================
+// Design tokens
+// Edit brand colors, fonts and breakpoints from this single file.
+// These SCSS variables are compiled once into CSS custom
+// properties (see base/_root.scss) so JavaScript can also read
+// them at runtime via getComputedStyle if needed.
+// =============================================================
+
+// Colors
+$color-bg:        #07070b;
+$color-bg-elev:   #0d0d13;
+$color-line:      #1c1c26;
+$color-text:      #f2f1f6;
+$color-text-dim:  #9a97a8;
+
+$color-violet:    #8b5cf6;
+$color-magenta:   #e6297a;
+$color-blue:      #3b82f6;
+$color-red:       #ef4444;
+
+// Typography
+$font-display: 'Sora', sans-serif;
+$font-body:    'Inter', sans-serif;
+
+// Layout
+$container-max: 1180px;
+$section-padding-x: 8vw;
+$section-padding-x-mobile: 6vw;
+
+// Breakpoints
+$bp-tablet: 900px;
