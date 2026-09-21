@@ -1,0 +1,120 @@
+@use '../abstracts/mixins' as *;
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 8vw;
+  background: linear-gradient(to bottom, rgba(7, 7, 11, 0.85), transparent);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+
+  span {
+    color: var(--text-dim);
+    font-weight: 500;
+  }
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, var(--red), var(--magenta), var(--violet), var(--blue), var(--red));
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+}
+
+nav a {
+  font-size: 0.94rem;
+  color: var(--text-dim);
+  transition: color .2s;
+
+  &:hover,
+  &.active {
+    color: var(--text);
+  }
+}
+
+.nav-cta {
+  padding: 10px 20px;
+  border: 1px solid var(--magenta);
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+
+  &:hover {
+    background: var(--magenta);
+    color: #fff;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  span {
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+  }
+}
+
+@include tablet-down {
+  nav,
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  // Mobile dropdown menu, toggled by js/modules/nav.js via
+  // a `nav-open` class on <body>.
+  body.nav-open {
+    nav {
+      display: block;
+      position: fixed;
+      top: 78px;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+      padding: 24px 6vw;
+      z-index: 99;
+
+      ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      position: fixed;
+      top: 22px;
+      right: 60px;
+      z-index: 101;
+    }
+  }
+}

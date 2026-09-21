@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+// CSS custom properties are kept (instead of relying only on SCSS
+// variables) because they are also read at runtime: index.html sets
+// inline `--tint1` / `--tint2` on project thumbnails, and any future
+// JS-driven theming can read/write these directly in the DOM.
+:root {
+  --bg: #{$color-bg};
+  --bg-elev: #{$color-bg-elev};
+  --line: #{$color-line};
+  --text: #{$color-text};
+  --text-dim: #{$color-text-dim};
+
+  --violet: #{$color-violet};
+  --magenta: #{$color-magenta};
+  --blue: #{$color-blue};
+  --red: #{$color-red};
+
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+}

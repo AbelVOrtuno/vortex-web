@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+// Applies its content block when the viewport is at or below the
+// tablet breakpoint. Usage:
+//   .element { @include tablet-down { display: none; } }
+@mixin tablet-down {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
