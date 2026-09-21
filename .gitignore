@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Sass source maps (generated locally, not needed in version control)
+*.css.map
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+npm-debug.log*
