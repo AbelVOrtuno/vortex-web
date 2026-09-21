@@ -1,0 +1,28 @@
+// =============================================================
+// Vortex Web — main stylesheet entry point
+// Compile with: npm run sass:build   (see package.json)
+// Output:       src/css/main.css
+// =============================================================
+
+// Abstracts (no CSS output on their own — variables & mixins)
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// Base
+@use 'base/root';
+@use 'base/reset';
+
+// Layout (page structure, one file per section)
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/section-heads';
+@use 'layout/about';
+@use 'layout/projects';
+@use 'layout/skills';
+@use 'layout/contact';
+@use 'layout/footer';
+
+// Components (reusable UI pieces)
+@use 'components/buttons';
+@use 'components/chips';
+@use 'components/cards';

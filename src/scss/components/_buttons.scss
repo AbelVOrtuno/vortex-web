@@ -1,0 +1,38 @@
+.btn {
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform .2s, background .2s, border-color .2s;
+
+  &-primary {
+    background: var(--magenta);
+    color: #fff;
+
+    &:hover {
+      background: #c81f68;
+      transform: translateY(-2px);
+    }
+
+    svg {
+      transition: transform .2s;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+
+  &-ghost {
+    border: 1px solid var(--line);
+    color: var(--text);
+
+    &:hover {
+      border-color: var(--text-dim);
+      transform: translateY(-2px);
+    }
+  }
+}

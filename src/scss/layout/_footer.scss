@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer {
+  padding: 34px 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+
+  @include tablet-down {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+// Global mobile adjustment for section padding, kept here so it's
+// applied after every section has been defined.
+@include tablet-down {
+  section {
+    padding: 90px $section-padding-x-mobile;
+  }
+}
