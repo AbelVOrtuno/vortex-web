@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="vortex" x1="8" y1="10" x2="57" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ef4444"/>
+      <stop offset=".38" stop-color="#e6297a"/>
+      <stop offset=".7" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#101016"/>
+  <path d="M48.8 14.5a24 24 0 1 0 4.1 29.2" stroke="url(#vortex)" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="m18.5 21 10.7 23.5c1.1 2.5 4.6 2.5 5.8.1L46 21" stroke="url(#vortex)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

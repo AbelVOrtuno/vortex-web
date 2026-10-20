@@ -14,3 +14,13 @@ Thumbs.db
 
 # Logs
 npm-debug.log*
+
+# Sass output generado dentro del arbol de fuentes
+/src/scss/main.css
+
+# Repositorios de proyectos independientes
+calculadora/
+morea-cafe/
+# Configuracion de despliegue local
+.netlify/
+.vercel/

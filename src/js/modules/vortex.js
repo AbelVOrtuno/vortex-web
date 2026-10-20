@@ -10,6 +10,8 @@ export function initVortex(canvasId = 'vortex-canvas') {
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
+  if (!ctx || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   let W, H, cx, cy, coreR, maxR, DPR;
   let mouseX = 0, mouseY = 0;
   let time = 0;
