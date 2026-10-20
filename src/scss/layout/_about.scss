@@ -1,6 +1,13 @@
 @use '../abstracts/mixins' as *;
 
 #about {
+  h2 {
+    margin-bottom: 18px;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.15;
+  }
+
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
@@ -30,6 +37,12 @@
   overflow: hidden;
   background: radial-gradient(circle at 30% 30%, #1a0f2e, #07070b 70%);
   border: 1px solid var(--line);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &::after {
     content: '';

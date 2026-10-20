@@ -1,9 +1,16 @@
 .project-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 12px;
+  padding: 24px;
   background: var(--bg-elev);
   transition: border-color .2s, transform .2s;
+
+  > * {
+    max-width: 100%;
+  }
 
   &:hover {
     border-color: var(--violet);
@@ -14,23 +21,34 @@
     font-family: var(--font-display);
     font-size: 1.28rem;
     margin-bottom: 10px;
+    overflow-wrap: anywhere;
   }
 
   p {
     color: var(--text-dim);
     font-size: 0.95rem;
     margin-bottom: 18px;
+    overflow-wrap: anywhere;
   }
 }
 
 .project-thumb {
-  height: 180px;
-  border-radius: 12px;
-  margin-bottom: 24px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
   // --tint1 / --tint2 are set per-card as inline custom properties
   // in the markup so each project can have its own accent gradient.
   background: linear-gradient(135deg, var(--tint1, var(--violet)), var(--tint2, var(--magenta)));
   opacity: 0.85;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .project-link {
@@ -40,4 +58,6 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  margin-top: auto;
+  align-self: flex-start;
 }

@@ -11,28 +11,53 @@ export function initNavScrollSpy() {
   const navLinks = document.querySelectorAll('nav a');
   if (!sections.length || !navLinks.length) return;
 
-  window.addEventListener('scroll', () => {
+  const updateActiveLink = () => {
     let current = '';
     sections.forEach(sec => {
       if (window.scrollY >= sec.offsetTop - 200) current = sec.id;
     });
-    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
-  });
+    navLinks.forEach(link => {
+      const isCurrent = link.getAttribute('href') === `#${current}`;
+      link.classList.toggle('active', isCurrent);
+      if (isCurrent) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 }
 
 export function initMobileMenu() {
   const toggle = document.querySelector('.menu-toggle');
-  if (!toggle) return;
+  const nav = document.querySelector('#primary-navigation');
+  if (!toggle || !nav) return;
+
+  const closeMenu = () => {
+    document.body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Abrir menú');
+  };
 
   toggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
+    const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
+    document.body.classList.toggle('nav-open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
   });
 
-  // Close the menu after tapping a link, so it doesn't stay open
-  // when the user is scrolled to the new section.
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.body.classList.remove('nav-open');
-    });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+  }, { passive: true });
 }

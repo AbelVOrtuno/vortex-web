@@ -15,10 +15,11 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.15rem;
+  white-space: nowrap;
 
   span {
     color: var(--text-dim);
@@ -27,10 +28,9 @@ header {
 }
 
 .logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: conic-gradient(from 90deg, var(--red), var(--magenta), var(--violet), var(--blue), var(--red));
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
 }
 
 nav ul {
@@ -47,6 +47,29 @@ nav a {
   &:hover,
   &.active {
     color: var(--text);
+  }
+}
+
+.logo:focus-visible,
+nav a:focus-visible,
+.nav-cta:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--magenta);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 8vw;
+  z-index: 200;
+  padding: 10px 14px;
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-150%);
+
+  &:focus {
+    transform: translateY(0);
   }
 }
 
