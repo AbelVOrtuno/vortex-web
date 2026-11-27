@@ -1,25 +1,108 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-footer {
-  padding: 34px 8vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-
-  @include tablet-down {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
-
 // Global mobile adjustment for section padding, kept here so it's
 // applied after every section has been defined.
-@include tablet-down {
+/*@include tablet-down {
   section {
     padding: 90px $section-padding-x-mobile;
+  }
+} */
+
+.site-footer {
+  padding: 70px 8vw 24px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+  }
+
+  .footer-brand {
+    max-width: 380px;
+
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+
+      span {
+        color: var(--text-dim);
+        font-weight: 500;
+      }
+    }
+
+    p {
+      line-height: 1.8;
+    }
+  }
+
+  .footer-links,
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    h3 {
+      margin-bottom: 6px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    a {
+      color: var(--text-dim);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--magenta);
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+  }
+
+  @include tablet-down {
+    padding: 55px 6vw 24px;
+
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 25px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+
+  @include mobile {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      grid-column: auto;
+    }
   }
 }

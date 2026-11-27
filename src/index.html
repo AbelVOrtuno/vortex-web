@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vortex Web — Desarrollo, Marketing Digital & IA</title>
-<meta name="description" content="Diseño y desarrollo web, marketing digital y automatizaciones con IA para negocios que quieren crecer en línea.">
-<meta name="theme-color" content="#07070b">
-<link rel="icon" type="image/svg+xml" href="assets/vortex-mark.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Web — Desarrollo, Marketing Digital & IA</title>
+  <meta name="description" content="Diseño y desarrollo web, marketing digital y automatizaciones con IA para negocios que quieren crecer en línea.">
+  <meta name="theme-color" content="#07070b">
+  <link rel="icon" type="image/svg+xml" href="assets/vortex-mark.svg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
 <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -23,31 +24,46 @@
     <img class="logo-mark" src="assets/vortex-mark.svg" alt="">
     VORTEX <span>WEB</span>
   </a>
+
   <nav id="primary-navigation" aria-label="Navegación principal">
     <ul>
       <li><a href="#hero" class="active">Inicio</a></li>
       <li><a href="#about">Sobre Mí</a></li>
+      <li><a href="#services">Servicios</a></li>
       <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#skills">Tecnologias y Habilidades</a></li>
       <li><a href="#contact">Contacto</a></li>
+      <li class="mobile-cta-item"><a href="#contact" class="nav-cta">Hablemos</a></li>
     </ul>
   </nav>
+
   <a href="#contact" class="nav-cta">Hablemos</a>
+
   <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
 </header>
 
 <main id="main-content">
+
 <section id="hero">
   <canvas id="vortex-canvas" aria-hidden="true"></canvas>
+
   <div class="hero-content">
-    <div class="kicker">Desarrollo web · Marketing digital · IA</div>
-    <h1 class="title">VORTEX<br><span class="line2">WEB</span></h1>
-    <p class="hero-sub">Sitios rápidos, campañas que convierten y automatizaciones con IA para negocios que quieren crecer en línea sin complicarse.</p>
+
+    <div class="kicker">Estudio de desarrollo de software</div>
+    <h1 class="title">
+      VORTEX<br>
+      <span class="line2">WEB</span>
+    </h1>
+
+    <p class="hero-sub">Diseñamos y desarrollamos sitios web y aplicaciones funcionales,
+      modernas y adaptadas a las necesidades de cada proyecto.
+    </p>
+
     <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">Ver proyectos
+      <a href="#projects" class="btn btn-primary">Explorar proyectos
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="#contact" class="btn btn-ghost">Hablemos</a>
+      <a href="#contact" class="btn btn-ghost">Iniciar un proyecto</a>
     </div>
   </div>
   <div class="side-links">
@@ -64,9 +80,57 @@
     <div class="about-visual"><img src="assets/avatar3D.jpg" alt="Retrato 3D de Abel" width="1305" height="816" loading="lazy" decoding="async"></div>
     <div>
       <div class="kicker">Sobre mí</div>
-      <h2>Diseño y desarrollo para crecer en línea</h2>
-      <p class="lead">¡Hola! Soy Abel, integrante de Vortex Web. Diseño y desarrollo sitios y contenido atractivos, funcionales y adaptados a cada negocio.</p>
-      <p class="body">Me especializo en landing pages, blogs y sitios estáticos optimizados para buscadores y adaptables a distintos dispositivos.</p>
+
+      <h2>Desarrollo de software con proposito</h2>
+
+      <p class="lead">¡Hola! Soy Abel, fundador de VORTEX WEB. Me apasiona crear experiencias digitales modernas, funcionales y cuidadas en cada detalle.</p>
+
+      <p class="body">Trabajo principalmente con HTML, CSS, Sass y JavaScript, y continuo fortaleciendo mis habilidades para desarrollar aplicaciones web y sistemas cada vez mas completos. Mi objetivo es transformar ideas y necesidades reales en
+        soluciones digitales utiles y bien construidas.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Servicios</div>
+      <h2>Soluciones digitales para llevar tus ideas más lejos</h2>
+      <p>
+        Desarrollamos experiencias web y herramientas digitales
+        enfocadas en resolver necesidades reales.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Desarrollo web</h3>
+        <p>
+          Creamos sitios web personalizados, landing pages y
+          páginas empresariales con diseños modernos, adaptables
+          y enfocados en ofrecer una buena experiencia.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Aplicaciones web</h3>
+        <p>
+          Desarrollamos aplicaciones interactivas que permiten
+          realizar tareas, consultar información y resolver
+          necesidades específicas mediante herramientas web.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Soluciones de software a medida</h3>
+        <p>
+          Diseñamos y construimos herramientas digitales
+          personalizadas para proyectos y negocios, de acuerdo
+          con sus necesidades y el alcance de cada desarrollo.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -76,86 +140,162 @@
     <div class="section-head">
       <div class="kicker">Proyectos</div>
       <h2>Trabajo reciente</h2>
-      <p>Conoce algunos de mis proyectos recientes, desarrollados por Vortex Web.</p>
-      <p>Próximamente agregaré más proyectos.</p>
+      <p>Explora algunos de los proyectos que he desarrollado,aplicando tecnologias web para crear experiencias funcionales,
+        modernas y adaptables.
+      </p>
     </div>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-thumb" style="--tint1:#8b5cf6;--tint2:#e6297a"><img src="assets/calcGlassDesk.png" alt="Interfaz de la calculadora Glassmorphism" width="1331" height="643" loading="lazy" decoding="async"></div>
-        <h3>Calculadora Glassmorphism interactiva</h3>
-        <p>Calculadora web con operaciones básicas, controles numéricos y una interfaz visual estilo glassmorphism.</p>
-        <div class="tag-row"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
-        <a href="https://glassmorphism-calculator-moderm.netlify.app/" class="project-link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+
+  <div class="projects-grid">
+
+    <!-- PROYECTO 1: CALCULADORA -->
+    <div class="project-card">
+      <div class="project-thumb" style="--tint1:#8b5cf6;--tint2:#e6297a">
+        <img src="assets/calcGlassDesk.png"
+          alt="Interfaz de la calculadora Glassmorphism"
+          width="1331" height="643"
+          loading="lazy" decoding="async">
       </div>
-      <div class="project-card">
-        <div class="project-thumb" style="--tint1:#3b82f6;--tint2:#8b5cf6"><img src="assets/MoreaCafeDesktop.jpg" alt="Sitio web de Morea Café" width="1345" height="632" loading="lazy" decoding="async"></div>
-        <h3>Morea Café</h3>
-        <p>Sitio para cafetería que presenta sus bebidas y sabores, con secciones para conocer la experiencia, reservar y contactar.</p>
-        <div class="tag-row"><span class="tag">HTML5</span><span class="tag">Node.js</span><span class="tag">CSS3</span><span class="tag">SASS</span><span class="tag">JavaScript</span></div>
-        <a href="https://morea-cafe.netlify.app/" class="project-link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+      <h3>Calculadora Glassmorphism</h3>
+      <p>
+      Aplicación web interactiva que permite realizar operaciones
+      matemáticas básicas mediante una interfaz moderna con
+      efectos visuales Glassmorphism.
+      </p>
+      <div class="tag-row">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
       </div>
-      <div class="project-card">
-        <div class="project-thumb" style="--tint1:#ef4444;--tint2:#e6297a"><img src="assets/FestivalMusicaDesk.jpg" alt="Página del festival de música electrónica" width="1344" height="639" loading="lazy" decoding="async"></div>
-        <h3>Festival de Música Electrónica</h3>
-        <p>Landing para un festival de música electrónica con fecha y sede destacadas, además de lineup, galería y boletos.</p>
-        <div class="tag-row"><span class="tag">Shopify</span><span class="tag">Figma</span><span class="tag">Meta Ads</span></div>
-        <a href="https://mimusica201.netlify.app/" class="project-link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+      <a href="https://glassmorphism-calculator-moderm.netlify.app/"
+      class="project-link" target="_blank"
+      rel="noopener noreferrer">Ver proyecto →</a>
+    </div>
+
+    <!-- PROYECTO 2: MOREA CAFÉ -->
+    <div class="project-card">
+      <div class="project-thumb" style="--tint1:#3b82f6;--tint2:#8b5cf6">
+        <img src="assets/MoreaCafeDesktop.jpg"
+        alt="Sitio web de Morea Café"
+        width="1345" height="632"
+        loading="lazy" decoding="async">
       </div>
-      <div class="project-card">
-        <div class="project-thumb" style="--tint1:#e6297a;--tint2:#3b82f6"><img src="assets/Alan&Erick-ClimaDesk.jpg" alt="Sitio web de reparación de aire acondicionado" width="1327" height="638" loading="lazy" decoding="async"></div>
-        <h3>Reparación de aires acondicionados</h3>
-        <p>Landing de reparación de aire acondicionado residencial y automotriz, con servicios, testimonios y contacto por WhatsApp.</p>
-        <div class="tag-row"><span class="tag">SEO</span><span class="tag">Google Ads</span><span class="tag">Analytics</span></div>
-        <a href="https://alanyerickclima2058.netlify.app/" class="project-link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+      <h3>Morea Café</h3>
+      <p>
+      Sitio web para una cafetería, con una presentación visual
+      de sus productos, secciones informativas y elementos
+      interactivos para mejorar la experiencia de navegación.
+      </p>
+      <div class="tag-row">
+        <span class="tag">HTML5</span>
+        <span class="tag">Sass</span>
+        <span class="tag">JavaScript</span>
       </div>
+      <a href="https://morea-cafe.netlify.app/"
+       class="project-link" target="_blank"
+        rel="noopener noreferrer">Ver proyecto →</a>
+    </div>
+
+    <!-- PROYECTO 3: FESTIVAL -->
+    <div class="project-card">
+      <div class="project-thumb" style="--tint1:#ef4444;--tint2:#e6297a">
+        <img src="assets/FestivalMusicaDesk.jpg"
+        alt="Página del festival de música electrónica"
+        width="1344" height="639"
+        loading="lazy" decoding="async">
+      </div>
+      <h3>Festival de Música Electrónica</h3>
+      <p>
+      Landing page para un festival musical con información
+      del evento, presentación del lineup, galería visual
+      y secciones dedicadas a los boletos.
+      </p>
+
+      <div class="tag-row">
+        <span class="tag">HTML5</span>
+        <span class="tag">Sass</span>
+        <span class="tag">JavaScript</span>
+      </div>
+
+      <a href="https://mimusica201.netlify.app/"
+      class="project-link" target="_blank"
+      rel="noopener noreferrer">Ver proyecto →</a>
+    </div>
+
+    <!-- PROYECTO 4: AIRE ACONDICIONADO -->
+    <div class="project-card">
+      <div class="project-thumb" style="--tint1:#e6297a;--tint2:#3b82f6">
+        <img src="assets/Alan&Erick-ClimaDesk.jpg"
+        alt="Sitio web de reparación de aire acondicionado"
+        width="1327" height="638"
+        loading="lazy" decoding="async">
+      </div>
+      <h3>Reparación de aires acondicionados</h3>
+      <p>
+      Landing page para un servicio de reparación de aire
+      acondicionado residencial y automotriz, con presentación
+      de servicios, testimonios y contacto por WhatsApp.
+      </p>
+      <div class="tag-row">
+        <span class="tag">HTML5</span>
+        <span class="tag">Sass</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <a href="https://alanyerickclima2058.netlify.app/"
+      class="project-link" target="_blank"
+      rel="noopener noreferrer">Ver proyecto →</a>
     </div>
   </div>
+
+  </div>
 </section>
+
 
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
-      <div class="kicker">Habilidades</div>
-      <h2>Con qué trabajo</h2>
-      <p>Desarrollo web, marketing digital e inteligencia artificial para impulsar la presencia y el crecimiento de tu negocio.</p>
+      <div class="kicker">Tecnologías y habilidades</div>
+      <h2>Las herramientas detrás de cada proyecto</h2>
+      <p>
+        Tecnologías y herramientas que utilizo para diseñar,
+        desarrollar y construir soluciones digitales.
+      </p>
     </div>
+
     <div class="skills-grid">
       <div class="skill-group">
-        <h3>Desarrollo web</h3>
+        <h3>Desarrollo frontend</h3>
         <div class="skill-chips">
-          <a class="chip" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">HTML / CSS / JS</a>
-          <a class="chip" href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a>
+          <a class="chip" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">HTML</a>
+          <a class="chip" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">CSS</a>
+          <a class="chip" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">JavaScript</a>
+          <a class="chip" href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a>
         </div>
       </div>
+
       <div class="skill-group">
-        <h3>Marketing digital</h3>
+        <h3>En formación</h3>
         <div class="skill-chips">
-          <a class="chip" href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">SEO</a>
-          <a class="chip" href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">Google Ads</a>
-          <a class="chip" href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer">Meta Ads</a>
-          <a class="chip" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">Google Maps</a>
-          <a class="chip" href="https://business.facebook.com/" target="_blank" rel="noopener noreferrer">Meta Business Suite</a>
-          <a class="chip" href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">Analítica web</a>
+          <a class="chip" href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a>
+          <a class="chip" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a>
+          <a class="chip" href="https://vite.dev/" target="_blank" rel="noopener noreferrer">Vite</a>
         </div>
       </div>
+
+      <div class="skill-group">
+        <h3>Desarrollo y herramientas</h3>
+        <div class="skill-chips">
+          <a class="chip" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a>
+          <a class="chip" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="chip" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code</a>
+          <a class="chip" href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>
+        </div>
+      </div>
+
       <div class="skill-group">
         <h3>Inteligencia artificial</h3>
         <div class="skill-chips">
-          <a class="chip" href="https://platform.openai.com/docs/overview" target="_blank" rel="noopener noreferrer">Chatbots con IA</a>
           <a class="chip" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>
           <a class="chip" href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>
-          <a class="chip" href="https://openai.com/" target="_blank" rel="noopener noreferrer">Generación de contenido</a>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Herramientas</h3>
-        <div class="skill-chips">
-          <a class="chip" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="chip" href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>
-          <a class="chip" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a>
-          <a class="chip" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Canva</a>
-          <a class="chip" href="https://nicepage.com/" target="_blank" rel="noopener noreferrer">NicePage</a>
-          <a class="chip" href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>
         </div>
       </div>
     </div>
@@ -166,27 +306,95 @@
   <div class="wrap contact-grid">
     <div>
       <div class="kicker">Contacto</div>
-      <h2>Cuéntame qué necesita tu negocio</h2>
-      <p class="lead">¿Tienes un negocio o proyecto y quieres llegar a más personas?</p>
-      <p class="lead">En Vortex Web creamos sitios a la medida de tu marca, tus objetivos y tus productos.</p>
-      <p class="lead">Cuéntame tu idea y la hacemos realidad.</p>
-      <a href="mailto:abelwebestudio@gmail.com" class="contact-email">
-        abelwebestudio@gmail.com
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+
+      <h2>¿Tienes una idea? Hagámosla realidad.</h2>
+
+      <p class="lead">
+        ¿Buscas desarrollar un sitio web, una aplicación
+        o una solución de software para tu negocio?
+      </p>
+
+      <p class="lead">
+        En VORTEX WEB transformamos ideas y necesidades
+        en soluciones digitales funcionales, modernas
+        y adaptadas a cada proyecto.
+      </p>
+
+      <p class="lead">
+        Cuéntanos qué tienes en mente y exploremos
+        cómo podemos desarrollarlo.
+      </p>
+
+      <a href="mailto:abelwebestudio@gmail.com"
+        class="contact-email">
+        Hablemos de tu proyecto
+        <svg width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
       </a>
     </div>
+
     <div class="contact-meta">
-      <a href="https://wa.me/527444243270" target="_blank" rel="noopener noreferrer">WhatsApp: +52 744 424 3270</a>
-      <a href="mailto:abelwebestudio@gmail.com">abelwebestudio@gmail.com</a>
+      <a href="https://wa.me/527444243270"
+        target="_blank" rel="noopener noreferrer">
+        WhatsApp: +52 744 424 3270
+      </a>
+
+      <a href="mailto:abelwebestudio@gmail.com">
+        abelwebestudio@gmail.com
+      </a>
+
       <span>Acapulco, Guerrero, México</span>
     </div>
   </div>
 </section>
+
+
 </main>
 
-<footer>
-  <span>© 2026 Vortex Web. Todos los derechos reservados.</span>
-  <span>Diseño y desarrollo propio.</span>
+<footer class="site-footer">
+  <div class="wrap footer-content">
+
+    <div class="footer-brand">
+      <a class="footer-logo" href="#hero">
+        VORTEX <span>WEB</span>
+      </a>
+
+      <p>
+        Estudio de desarrollo de software.
+        Creamos sitios web, aplicaciones y soluciones
+        digitales para convertir ideas en proyectos funcionales.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explora</h3>
+      <a href="#hero">Inicio</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#services">Servicios</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#skills">Tecnologías</a>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Hablemos</h3>
+      <a href="mailto:abelwebestudio@gmail.com">
+        Correo electrónico
+      </a>
+      <a href="https://wa.me/527444243270"
+        target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+      <span>Acapulco, Guerrero, México</span>
+    </div>
+
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 VORTEX WEB. Todos los derechos reservados.</span>
+    <span>Diseñado y desarrollado con propósito.</span>
+  </div>
 </footer>
 
 <script type="module" src="js/main.js"></script>
